@@ -14,69 +14,70 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            font-size: 16px;
         }
-        
+
         header {
             background-color: #343a40;
             color: white;
-            padding: 2rem 0;
+            padding: 1rem 0;
             text-align: center;
         }
-        
+
         .banner {
             width: 100%;
-            height: 300px;
+            height: 180px;
             object-fit: cover;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
-        
+
         .container-main {
             flex: 1;
-            padding: 0 0 2rem 0;
-            max-width: 1200px;
+            padding: 0 1rem 2rem 1rem;
+            max-width: 960px;
             margin: 0 auto;
         }
-        
+
         .leilao-card {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             height: 100%;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease;
         }
-        
+
         .leilao-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .leilao-card .card-body {
             flex: 1;
-            padding: 1.5rem;
+            padding: 1rem;
         }
-        
+
         .leilao-card .btn {
             width: 100%;
             max-width: 150px;
             margin: 0 auto;
             display: block;
         }
-        
+
         footer {
             background-color: #343a40;
             color: white;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             margin-top: 2rem;
         }
-        
+
         .sobre-projeto {
             background-color: white;
             border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -88,7 +89,6 @@
         </div>
     </header>
 
-    <!-- Banner adicionado aqui -->
     <img src="banner.jpg" alt="Banner do Buscador Guapo" class="banner">
 
     <main class="container-main">
@@ -99,10 +99,10 @@
             </div>
 
             <h2 class="mb-4 text-center">Sites de Leilões Recomendados</h2>
-            
+
             <div class="row">
-                <!-- FIP -->
-                <div class="col-md-4">
+                <!-- Reutilize o mesmo padrão para cada card -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>FIP</h5>
@@ -110,9 +110,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- EBL -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>EBL</h5>
@@ -120,9 +119,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- APL -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>APL</h5>
@@ -130,9 +128,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- EDGAR -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>EDGAR</h5>
@@ -140,9 +137,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- OK LEILÕES -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>OK LEILÕES</h5>
@@ -150,9 +146,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- LEILÃO JÁ -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>LEILÃO JÁ</h5>
@@ -160,9 +155,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- JOÃO EMÍLIO -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>JOÃO EMÍLIO</h5>
@@ -170,9 +164,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- ROGÉRIO MENEZES -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>ROGÉRIO MENEZES</h5>
@@ -180,9 +173,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- SODRÉ SANTORO -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>SODRÉ SANTORO</h5>
@@ -190,9 +182,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- COPART Leilões -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>COPART Leilões</h5>
@@ -200,9 +191,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- VIP Leilões -->
-                <div class="col-md-4">
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card leilao-card">
                         <div class="card-body text-center">
                             <h5>VIP Leilões</h5>
