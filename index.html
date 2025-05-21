@@ -48,17 +48,17 @@
       max-width: 900px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center; /* centraliza conteúdo */
       gap: 1rem;
     }
 
     .btn-leilao {
-      flex: 1 1 250px;
-      max-width: 250px;
+      width: 250px;
       font-size: 1.3rem;
       padding: 1rem;
       border-radius: 8px;
+      text-align: center;
     }
 
     .sobre-projeto {
@@ -71,6 +71,7 @@
       max-width: 900px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
 
     footer {
@@ -86,6 +87,7 @@
       font-size: 2.5rem;
       text-align: center;
       margin-bottom: 1rem;
+      width: 100%;
     }
   </style>
 </head>
@@ -106,6 +108,9 @@
     </div>
 
     <h2>Sites de Leilões Recomendados</h2>
+
+    <!-- Botão FIPE antes do EBL -->
+    <a href="https://veiculos.fipe.org.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">FIPE</a>
 
     <a href="https://www.eblonline.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">EBL</a>
     <a href="https://www.aplleiloes.com.br" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">APL</a>
