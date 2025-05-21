@@ -1,139 +1,81 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site que agrupa leilões verdadeiros facilitando quem está iniciando">
-    <meta name="author" content="Marcos Fernandes">
-    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+<style>
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     
-    <title>Buscador Guapo</title>
-
-    <!-- Bootstrap CSS corrigido -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
     
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #343a40;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-        }
+    header {
+        background-color: #343a40;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .banner {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .container-main {
+        padding: 1.5rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .card {
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+    
+    .card:hover {
+        transform: translateY(-3px);
+    }
+    
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #343a40;
+        color: white;
+        margin-top: 2rem;
+    }
+    
+    .site-link-card {
+        margin-bottom: 1rem;
+        padding: 1rem !important;
+    }
+    
+    .card h5 {
+        margin-bottom: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
         .banner {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
+            height: 200px;
         }
+        
         .container-main {
-            padding: 2rem 1rem;
-        }
-        .card {
-            border-radius: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        footer {
-            text-align: center;
             padding: 1rem;
-            background-color: #343a40;
-            color: white;
-            margin-top: 3rem;
         }
-        .site-link-card {
-            margin-bottom: 1.5rem;
+        
+        .card {
+            margin-bottom: 0.75rem;
         }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Buscador Guapo</h1>
-        <p>Encontre os melhores leilões com confiança</p>
-    </header>
-
-    <img src="banner.jpg" alt="Banner do site" class="banner">
-
-    <div class="container container-main">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card p-4 mb-4">
-                    <h2 class="mb-3">Sobre o projeto</h2>
-                    <p>Este site foi criado para ajudar iniciantes a encontrar leilões reais e confiáveis de forma prática e centralizada.</p>
-                </div>
-
-                <h2 class="mb-3">Sites de Leilões Recomendados</h2>
-                
-        <div class="card p-4 site-link-card">
-            <h5>FIP</h5>
-            <a href="https://veiculos.fipe.org.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>EBL</h5>
-            <a href="https://www.eblonline.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>APL</h5>
-            <a href="https://www.aplleiloes.com.br" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>EDGAR</h5>
-            <a href="https://www.edgarcarvalholeiloeiro.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>OK LEILÕES</h5>
-            <a href="https://www.okleiloes.com.br/index/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>LEILÃO JÁ</h5>
-            <a href="https://www.leiloesja.com.br/agenda/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>JOÃO EMÍLIO</h5>
-            <a href="https://www.joaoemilio.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>ROGÉRIO MENEZES</h5>
-            <a href="https://www.rogeriomenezes.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>SODRÉ SANTORO</h5>
-            <a href="https://www.sodresantoro.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>COPART Leilões</h5>
-            <a href="https://www.copart.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-        <div class="card p-4 site-link-card">
-            <h5>VIP Leilões</h5>
-            <a href="https://www.vipleiloes.com.br/" target="_blank" class="btn btn-primary">Acessar site</a>
-        </div>
-    
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2025 Marcos Fernandes. Todos os direitos reservados.
-    </footer>
-
-</body>
-</html>
+        
+        header {
+            padding: 0.75rem 0;
+        }
+        
+        header h1 {
+            font-size: 1.75rem;
+        }
+    }
+</style>
