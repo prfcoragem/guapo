@@ -45,42 +45,19 @@
     .container-main {
       flex: 1;
       padding-bottom: 2rem;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
-    }
-
-    .leilao-card {
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      min-height: 300px;
       display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease;
-      font-size: 1.25rem;
-      padding: 1.5rem;
-    }
-
-    .leilao-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .leilao-card .card-body {
-      flex: 1;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      gap: 1rem;
     }
 
-    .leilao-card .btn {
-      width: 100%;
-      font-size: 1.2rem;
+    .btn-leilao {
+      flex: 1 1 250px;
+      max-width: 250px;
+      font-size: 1.3rem;
       padding: 1rem;
-      max-width: 220px;
-      margin: 1.5rem auto 0 auto;
-      display: block;
       border-radius: 8px;
     }
 
@@ -91,6 +68,9 @@
       margin-bottom: 2rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       font-size: 1.3rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     footer {
@@ -105,27 +85,8 @@
     h2 {
       font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 1rem;
     }
-
-    .row.justify-center-last::after {
-      content: "";
-      flex: auto;
-    }
-
-    @media (min-width: 992px) {
-      /* 3 colunas no desktop para cards maiores */
-      .col-lg-4 {
-        flex: 0 0 auto;
-        width: 33.333333%;
-      }
-    }
-
-    @media (max-height: 700px) {
-      body {
-        min-height: 700px;
-      }
-    }
-
   </style>
 </head>
 <body>
@@ -139,117 +100,24 @@
   <img src="banner.jpg" alt="Banner do Buscador Guapo" class="banner" />
 
   <main class="container-main">
-    <div class="container">
-      <div class="sobre-projeto">
-        <h2>Sobre o Projeto</h2>
-        <p>Este site foi criado para ajudar iniciantes a encontrar leilões reais e confiáveis de forma prática e centralizada.</p>
-      </div>
-
-      <h2 class="mb-4">Sites de Leilões Recomendados</h2>
-
-      <div class="row justify-center-last">
-        <!-- Cards aqui -->
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>FIP</h5>
-              <a href="https://veiculos.fipe.org.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>EBL</h5>
-              <a href="https://www.eblonline.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>APL</h5>
-              <a href="https://www.aplleiloes.com.br" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>EDGAR</h5>
-              <a href="https://www.edgarcarvalholeiloeiro.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>OK LEILÕES</h5>
-              <a href="https://www.okleiloes.com.br/index/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>LEILÃO JÁ</h5>
-              <a href="https://www.leiloesja.com.br/agenda/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>JOÃO EMÍLIO</h5>
-              <a href="https://www.joaoemilio.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>ROGÉRIO MENEZES</h5>
-              <a href="https://www.rogeriomenezes.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>SODRÉ SANTORO</h5>
-              <a href="https://www.sodresantoro.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>COPART Leilões</h5>
-              <a href="https://www.copart.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-          <div class="card leilao-card text-center">
-            <div class="card-body">
-              <h5>VIP Leilões</h5>
-              <a href="https://www.vipleiloes.com.br/" class="btn btn-primary">Acessar site</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div class="sobre-projeto">
+      <h2>Sobre o Projeto</h2>
+      <p>Este site foi criado para ajudar iniciantes a encontrar leilões reais e confiáveis de forma prática e centralizada.</p>
     </div>
+
+    <h2>Sites de Leilões Recomendados</h2>
+
+    <a href="https://veiculos.fipe.org.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">FIP</a>
+    <a href="https://www.eblonline.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">EBL</a>
+    <a href="https://www.aplleiloes.com.br" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">APL</a>
+    <a href="https://www.edgarcarvalholeiloeiro.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">EDGAR</a>
+    <a href="https://www.okleiloes.com.br/index/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">OK LEILÕES</a>
+    <a href="https://www.leiloesja.com.br/agenda/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">LEILÃO JÁ</a>
+    <a href="https://www.joaoemilio.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">JOÃO EMÍLIO</a>
+    <a href="https://www.rogeriomenezes.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">ROGÉRIO MENEZES</a>
+    <a href="https://www.sodresantoro.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">SODRÉ SANTORO</a>
+    <a href="https://www.copart.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">COPART Leilões</a>
+    <a href="https://www.vipleiloes.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">VIP Leilões</a>
   </main>
 
   <footer>
