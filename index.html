@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buscador Guapo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
@@ -11,32 +11,26 @@
       background-color: #f8f9fa;
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     header {
+      width: 100%;
       background-color: #343a40;
       color: white;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
-      width: 100%;
-      max-width: 900px;
-      box-sizing: border-box;
     }
 
     header h1 {
-      font-size: 3.5rem;
+      font-size: 2.8rem;
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
 
     header p.lead {
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 300;
+      margin-bottom: 0;
     }
 
     .banner {
@@ -44,17 +38,19 @@
       height: 300px;
       object-fit: cover;
       margin-bottom: 2rem;
-      max-width: 900px;
     }
 
     .container-main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .btn-leilao {
+      font-size: 1.2rem;
+      padding: 1rem;
+      border-radius: 8px;
       width: 100%;
-      max-width: 900px;
-      padding: 0 1rem 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-sizing: border-box;
     }
 
     .sobre-projeto {
@@ -63,63 +59,7 @@
       padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      font-size: 1.3rem;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 1rem;
-      width: 100%;
-    }
-
-    /* Botão FIPE solo, centralizado */
-    .btn-fipe {
-      width: 100%;
-      max-width: 250px;
-      font-size: 1.3rem;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      box-sizing: border-box;
-    }
-
-    /* Container para EBL e APL lado a lado */
-    .btn-row-2 {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      width: 100%;
-      max-width: 540px; /* 2 x 250 + gap */
-      box-sizing: border-box;
-      flex-wrap: wrap;
-    }
-
-    .btn-leilao {
-      flex: 1 1 45%; /* botão ocupa até 45% da linha, podendo encolher */
-      max-width: 250px;
-      font-size: 1.3rem;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    /* Container para os demais botões em grupos de 4 */
-    .btn-grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      width: 100%;
-      max-width: 900px;
-      box-sizing: border-box;
+      font-size: 1.2rem;
     }
 
     footer {
@@ -127,37 +67,20 @@
       color: white;
       text-align: center;
       padding: 1.5rem 0;
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      width: 100%;
-      max-width: 900px;
-      box-sizing: border-box;
+      font-size: 1rem;
     }
 
-    /* Ajuste para telas pequenas */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-      header p.lead {
-        font-size: 1.2rem;
-      }
-      h2 {
-        font-size: 1.8rem;
-      }
-      .btn-fipe, .btn-leilao {
-        font-size: 1.1rem;
-        padding: 0.8rem;
-      }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Buscador Guapo</h1>
-      <p class="lead">Encontre os melhores leilões com confiança e praticidade</p>
-    </div>
+    <h1>Buscador Guapo</h1>
+    <p class="lead">Encontre os melhores leilões com confiança e praticidade</p>
   </header>
 
   <img src="banner.jpg" alt="Banner do Buscador Guapo" class="banner" />
@@ -170,26 +93,46 @@
 
     <h2>Sites de Leilões Recomendados</h2>
 
-    <!-- FIPE sozinho e centralizado -->
-    <a href="https://veiculos.fipe.org.br/" class="btn btn-primary btn-fipe" target="_blank" rel="noopener noreferrer">FIPE</a>
-
-    <!-- EBL e APL lado a lado -->
-    <div class="btn-row-2">
-      <a href="https://www.eblonline.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">EBL</a>
-      <a href="https://www.aplleiloes.com.br" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">APL</a>
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-4 mb-3">
+        <a href="https://veiculos.fipe.org.br/" class="btn btn-primary btn-leilao d-block" target="_blank">FIPE</a>
+      </div>
     </div>
 
-    <!-- Demais botões em grid 4x adaptável -->
-    <div class="btn-grid-4">
-      <a href="https://www.edgarcarvalholeiloeiro.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">EDGAR</a>
-      <a href="https://www.okleiloes.com.br/index/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">OK LEILÕES</a>
-      <a href="https://www.leiloesja.com.br/agenda/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">LEILÃO JÁ</a>
-      <a href="https://www.joaoemilio.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">JOÃO EMÍLIO</a>
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-6 col-lg-4 mb-3">
+        <a href="https://www.eblonline.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">EBL</a>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-3">
+        <a href="https://www.aplleiloes.com.br" class="btn btn-primary btn-leilao d-block" target="_blank">APL</a>
+      </div>
+    </div>
 
-      <a href="https://www.rogeriomenezes.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">ROGÉRIO MENEZES</a>
-      <a href="https://www.sodresantoro.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">SODRÉ SANTORO</a>
-      <a href="https://www.copart.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">COPART Leilões</a>
-      <a href="https://www.vipleiloes.com.br/" class="btn btn-primary btn-leilao" target="_blank" rel="noopener noreferrer">VIP Leilões</a>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div class="col">
+        <a href="https://www.edgarcarvalholeiloeiro.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">EDGAR</a>
+      </div>
+      <div class="col">
+        <a href="https://www.okleiloes.com.br/index/" class="btn btn-primary btn-leilao d-block" target="_blank">OK LEILÕES</a>
+      </div>
+      <div class="col">
+        <a href="https://www.leiloesja.com.br/agenda/" class="btn btn-primary btn-leilao d-block" target="_blank">LEILÃO JÁ</a>
+      </div>
+      <div class="col">
+        <a href="https://www.joaoemilio.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">JOÃO EMÍLIO</a>
+      </div>
+      <div class="col">
+        <a href="https://www.rogeriomenezes.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">ROGÉRIO MENEZES</a>
+      </div>
+      <div class="col">
+        <a href="https://www.sodresantoro.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">SODRÉ SANTORO</a>
+      </div>
+      <div class="col">
+        <a href="https://www.copart.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">COPART Leilões</a>
+      </div>
+      <div class="col">
+        <a href="https://www.vipleiloes.com.br/" class="btn btn-primary btn-leilao d-block" target="_blank">VIP Leilões</a>
+      </div>
     </div>
   </main>
 
